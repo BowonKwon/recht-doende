@@ -254,7 +254,7 @@ th { font-size: .75rem; color: var(--muted); font-weight: 600 }
 .tocl a:hover { color: var(--accent) }
 .print .toc { display: none }
 @media (min-width: 1500px) { :root:not(.print) .toc { display: none } }  /* 넓은 화면은 왼쪽 고정 차례가 같은 일을 한다(2026-10-29) */
-.hublink{margin:0 0 .6rem;font-size:.85rem}.hublink a{color:inherit}.print .hublink{display:none}</style>
+.hublink{margin:0 0 .6rem;font-size:.85rem}.hublink a{color:inherit}.hublink a.hubbtn{display:inline-flex;align-items:center;gap:.4em;padding:.2em .78em;border:1px solid currentColor;border-radius:999px;text-decoration:none;font-weight:600;white-space:nowrap;line-height:1.35;color:inherit}.hublink a.hubbtn::before{content:"";width:.7em;height:.7em;flex:none;background:linear-gradient(currentColor,currentColor) 0 0/42% 42% no-repeat,linear-gradient(currentColor,currentColor) 100% 0/42% 42% no-repeat,linear-gradient(currentColor,currentColor) 0 100%/42% 42% no-repeat,linear-gradient(currentColor,currentColor) 100% 100%/42% 42% no-repeat}.hublink a.hubbtn:hover{background:rgba(127,127,127,.16)}.hublink a.hubbtn{margin-left:.7em}.print .hublink{display:none}</style>
 
 <div class="wrap" id="app"></div>
 
@@ -374,7 +374,7 @@ function tocApx() {
 function render() {
   const nav = DATA.map(c => `<a class="chip" href="#ch${c.chapter.num}" title="${esc(c.chapter.title)}">${c.chapter.num}</a>`).join('') + ((META.appendix || []).length ? `<a class="chip" href="#apx-${META.appendix[0].id}">부록</a>` : '');
   document.getElementById('app').innerHTML = `
-    <p class="hublink"><a href="https://bowonkwon.github.io/Legal-Language-Handbooks/">법률 외국어 자습서 모음</a> · <a href="https://bowonkwon.github.io/">공개 자료 허브</a></p><header class="mast"><p class="word">Recht doende</p><p class="sub">조문으로 읽는 법률 네덜란드어</p><p class="colophon">권보원 (대구지방법원 부장판사) · ${esc(META.edition)}</p></header>${PRINT ? '' : tocHTML()}
+    <p class="hublink"><a href="https://bowonkwon.github.io/Legal-Language-Handbooks/">법률 외국어 자습서 모음</a> <a class="hubbtn" href="https://bowonkwon.github.io/">공개 자료 허브</a></p><header class="mast"><p class="word">Recht doende</p><p class="sub">조문으로 읽는 법률 네덜란드어</p><p class="colophon">권보원 (대구지방법원 부장판사) · ${esc(META.edition)}</p></header>${PRINT ? '' : tocHTML()}
     <div class="tools">${PRINT ? '' : '<button class="tocbtn" type="button" id="tocbtn" aria-expanded="false" aria-controls="side">차례</button>'}<nav aria-label="장">${nav}</nav><label class="tog"><input type="checkbox" id="hideko"> 한국어 가리기</label></div>
     ${DATA.map(chapterHTML).join('')}
     ${(META.appendix || []).map(appendixHTML).join('')}
