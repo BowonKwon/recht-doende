@@ -374,7 +374,7 @@ function tocApx() {
 function render() {
   const nav = DATA.map(c => `<a class="chip" href="#ch${c.chapter.num}" title="${esc(c.chapter.title)}">${c.chapter.num}</a>`).join('') + ((META.appendix || []).length ? `<a class="chip" href="#apx-${META.appendix[0].id}">부록</a>` : '');
   document.getElementById('app').innerHTML = `
-    <p class="hublink"><a href="https://bowonkwon.github.io/Legal-Language-Handbooks/">법률 외국어 자습서 모음</a></p><header class="mast"><p class="word">Recht doende</p><p class="sub">조문으로 읽는 법률 네덜란드어</p><p class="colophon">권보원 (대구지방법원 부장판사) · ${esc(META.edition)}</p></header>${PRINT ? '' : tocHTML()}
+    <p class="hublink"><a href="https://bowonkwon.github.io/Legal-Language-Handbooks/">법률 외국어 자습서 모음</a> · <a href="https://bowonkwon.github.io/">공개 자료 허브</a></p><header class="mast"><p class="word">Recht doende</p><p class="sub">조문으로 읽는 법률 네덜란드어</p><p class="colophon">권보원 (대구지방법원 부장판사) · ${esc(META.edition)}</p></header>${PRINT ? '' : tocHTML()}
     <div class="tools">${PRINT ? '' : '<button class="tocbtn" type="button" id="tocbtn" aria-expanded="false" aria-controls="side">차례</button>'}<nav aria-label="장">${nav}</nav><label class="tog"><input type="checkbox" id="hideko"> 한국어 가리기</label></div>
     ${DATA.map(chapterHTML).join('')}
     ${(META.appendix || []).map(appendixHTML).join('')}
