@@ -44,6 +44,10 @@ GitHub에서 `index.html` 을 누르면 책 대신 코드가 보입니다. 책�
 
 엮은이에게 권리가 있는 부분은 [CC BY-NC 4.0](LICENSE)입니다. 네덜란드 법령·판결은 네덜란드 저작권법(Auteurswet) 제11조에 따라 저작권 대상이 아니고, 정부 데이터 포털은 법령 데이터에 CC0 1.0, 판결 데이터에 「Publiek domein」을 표시합니다. 1631년 원전과 1921년 편집본은 보호기간이 지났습니다. 이 책은 위 기관들이 만들거나 승인한 것이 아닙니다.
 
+## 일러두기
+
+이 저장소의 자료는 엮은이가 개인적으로 공부하며 엮은 것입니다. 엮은이가 속한 기관의 견해나 업무와는 관계가 없습니다. 법률 자문이 아닙니다.
+
 ---
 
 <a id="english"></a>
@@ -84,3 +88,7 @@ Bowon Kwon (comp.), *Recht doende: Legal Dutch through the statutes*, public edi
 ## License
 
 The parts in which the compiler holds rights are licensed under [CC BY-NC 4.0](LICENSE). Dutch statutes and judgments are not protected by copyright under article 11 of the Dutch Copyright Act (Auteurswet), and the government data portal marks the legislation data CC0 1.0 and the case-law data "Publiek domein". The 1631 source and the 1921 edition are out of copyright. This book was not made or endorsed by any of the institutions named above.
+
+## Note
+
+These are personal study materials and do not represent the views or work of any institution the compiler belongs to. Not legal advice.
